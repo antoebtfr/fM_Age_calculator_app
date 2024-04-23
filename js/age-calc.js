@@ -81,8 +81,13 @@ class AgeCalculator {
 
     isValidFormat(dateInput) {
 
-        const actualDate = new Date(dateInput.years + '-' + dateInput.months + '-' + dateInput.days);
+        
+        let actualDate = new Date(dateInput.years + '-' + dateInput.months + '-' + dateInput.days);
         const dateNow = new Date();
+        
+        if (parseInt(dateInput.years) <= 99) {
+            actualDate.setFullYear(dateInput.years);
+        }
 
         let result = true;
         let invalidArray = []
@@ -327,13 +332,13 @@ class AgeCalculator {
 
         this.dayInput.on('keydown', e => {
 
-            if (this.dayInput.val().length >= 2 && e.originalEvent.key !== "Backspace") {
+            if (this.dayInput.val().length >= 2 && e.originalEvent.key !== "Backspace" && e.originalEvent.key !== 'Tab') {
                 this.monthInput.trigger('select');
             };
         })
 
         this.monthInput.on('keydown', e => {
-            if (this.monthInput.val().length >= 2 && e.originalEvent.key !== "Backspace") {
+            if (this.monthInput.val().length >= 2 && e.originalEvent.key !== "Backspace" && e.originalEvent.key !== 'Tab') {
                 this.yearInput.trigger('select');
             };
         })
