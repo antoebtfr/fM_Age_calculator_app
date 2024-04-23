@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel='stylesheet' href="./style/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,900;1,400;1,800&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+
+</head>
+
+<body>
+
+  <section id="calculator-modal">
+
+    <div id="calculator-inputs">
+      <div class="day-calc-container calc-input-container">
+        <label for="day-calc-input">Day</label>
+        <input id="day-calc-input" placeholder="DD" type="number" minlength="1" maxlength="2">
+        <p class="error-msg error">Must be a valid day</p>
+      </div>
+      <div class="month-calc-container calc-input-container">
+        <label for="month-calc-input">Month</label>
+        <input id="month-calc-input" placeholder="MM" type="number" minlength="1" maxlength="2">
+        <p class="error-msg error">Must be a valid month</p>
+      </div>
+      <div class="year-calc-container calc-input-container">
+        <label for="year-calc-input">Year</label>
+        <input id="year-calc-input" placeholder="YYYY" type="number" minlength="1">
+        <p class="error-msg error">Must be in the past</p>
+      </div>
+    </div>
+
+    <div class="calc-breakline-container">  
+      <div class="breakline"></div>
+      <button id="calculator-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 46 44">
+          <g fill="none" stroke="#FFF" stroke-width="2">
+            <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+          </g>
+        </svg>
+      </button>
+    </div>
+
+    <div id="calculator-result">
+
+      <p class="years-result"><span class="calc-result">- -</span> years</p>
+      <p class="months-result"><span class="calc-result">- -</span> months</p>
+      <p class="days-result"><span class="calc-result">- -</span> days</p>
+    </div>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+<script src="js/app.js" type="module"></script>
+
+</html>
